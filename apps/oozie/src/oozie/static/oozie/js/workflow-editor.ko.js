@@ -1336,6 +1336,8 @@ var WorkflowEditorViewModel = function (layout_json, workflow_json, credentials_
     });
   }
 
+  self.draggableHiveIngestionAction = ko.observable(bareWidgetBuilder("Hive Ingestion Script", "hive-ingestion-widget"));
+  self.draggableVerticaIngestionAction = ko.observable(bareWidgetBuilder("Vertica Ingestion Script", "vertica-ingestion-widget"));
   self.draggableHiveAction = ko.observable(bareWidgetBuilder("Hive Script", "hive-widget"));
   self.draggableHive2Action = ko.observable(bareWidgetBuilder("HiveServer2 Script", "hive2-widget"));
   self.draggableImpalaAction = ko.observable(bareWidgetBuilder("Impala Script", "impala-widget"));

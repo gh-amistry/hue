@@ -251,6 +251,24 @@ ${ layout.menubar(section='workflows', is_editor=True, pullright=buttons, is_emb
 
     <!-- ko if: $root.availableActions().length == 0 || $root.availableActions().indexOf('hive') != -1 -->
     <div data-bind="css: { 'draggable-widget': true },
+                    draggable: {data: draggableHiveIngestionAction(), isEnabled: true,
+                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableHiveIngestionAction());}}}"
+         title="${_('Hive Ingestion Script')}" rel="tooltip" data-placement="top">
+         <a class="draggable-icon"><img src="${ static('oozie/art/icon_beeswax_48b.png') }" class="app-icon" alt="${ _('Hive Ingestion icon') }"></a>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: $root.availableActions().length == 0 || $root.availableActions().indexOf('hive') != -1 -->
+    <div data-bind="css: { 'draggable-widget': true },
+                    draggable: {data: draggableVerticaIngestionAction(), isEnabled: true,
+                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableVerticaIngestionAction());}}}"
+         title="${_('Vertica Ingestion Script')}" rel="tooltip" data-placement="top">
+         <a class="draggable-icon"><img src="${ static('oozie/art/vertica-1.png') }" class="app-icon" alt="${ _('Vertica Ingestion icon') }"></a>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: $root.availableActions().length == 0 || $root.availableActions().indexOf('hive') != -1 -->
+    <div data-bind="css: { 'draggable-widget': true },
                     draggable: {data: draggableHiveAction(), isEnabled: true,
                     options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableHiveAction());}}}"
          title="${_('Hive Script')}" rel="tooltip" data-placement="top">

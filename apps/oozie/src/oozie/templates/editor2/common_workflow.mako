@@ -168,6 +168,14 @@
         &nbsp;
       </span>
 
+      <!-- ko if: widgetType() == 'hive-ingestion-widget' -->
+      <img src="${ static('oozie/art/icon_beeswax_48b.png') }" class="widget-icon" alt="${ _('Hive ingestion icon') }">
+      <!-- /ko -->
+
+      <!-- ko if: widgetType() == 'vertica-ingestion-widget' -->
+      <img src="${ static('oozie/art/vertica-1.png') }" class="widget-icon" alt="${ _('Vertica ingestion icon') }">
+      <!-- /ko -->
+
       <!-- ko if: widgetType() == 'hive-widget' -->
       <img src="${ static('oozie/art/icon_beeswax_48.png') }" class="widget-icon" alt="${ _('Hive icon') }">
       <!-- /ko -->
